@@ -1,5 +1,36 @@
-$red: red;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import '~normalize.css';
+@import 'header';
+@import 'toolbar';
+@import 'formula';
+@import 'table';
+
+@import 'dashboard';
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
 
 body {
-  background: $red;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+}
+
+.excel {
+  position: relative;
+  height: 100%;
+  max-width: 100%;
+  font-size: .8rem;
+  color: #888;
 }
