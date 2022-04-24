@@ -42,4 +42,8 @@ function isEqual(a, b) {
      }
  }
 
-export {capitalizeFirstLetter, storage, isEqual, toCorrectStyles, toInlineStyles, debounce}
+ function preventDefault(e) {
+    e.preventDefault()
+ }
+
+export {capitalizeFirstLetter, storage, isEqual, toCorrectStyles, toInlineStyles, debounce, preventDefault}
