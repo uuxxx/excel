@@ -1,4 +1,3 @@
-import {storage} from '@core/utils';
 import {initialStyleState, defaultTitle} from '@/constants';
 
 const defaultState = {
@@ -7,7 +6,8 @@ const defaultState = {
     dataState: {},
     currentText: '',
     currentStyles: initialStyleState,
-    defaultTitle: defaultTitle
+    defaultTitle: defaultTitle,
+    date: new Date().toJSON()
 }
 
 const normalize = s => ({
@@ -16,4 +16,6 @@ const normalize = s => ({
     currentText: ''
 })
 
-export const initialState = storage('state') ? normalize(storage('state')) : defaultState
+export function normalizeInitialState(state) {
+    return state ? normalize(state) : defaultState
+}
